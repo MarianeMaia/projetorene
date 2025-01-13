@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROUPAS SOLIDÁRIAS</title>
+    <link rel="stylesheet" href="..//static//index.css">
+</head>
+<body>
+    <header>
+        <h1>ROUPAS SOLIDÁRIAS</h1>
+    </header>
+    <main>
+        <div class="login-container">
+            {{texto}}
+            <h2>Login</h2>
+            <form action="/fazerlogin" method="post">
+                <label for="username">Login</label>
+                <input type="text" id="username" name="login">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="senha">
+
+                <button type="submit">Enviar</button>
+                 <a href="/cadastreuser">Não é cadastrado? Registre-se aqui</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

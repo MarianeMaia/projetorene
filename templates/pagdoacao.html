@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Roupas para Doação</title>
+    <link rel="stylesheet" href="../static/pagdoacao.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CADASTRO DE ROUPAS PARA DOAÇÃO</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="tipo-roupa">Selecione o Tipo de Roupa</label>
+                <select id="tipo-roupa" name="tipo-roupa">
+                    <option value="short">Short</option>
+                    <option value="camisa">Camisa / Blusa</option>
+                    <option value="calca">Calça</option>
+                    <option value="jaqueta">Jaqueta</option>
+                    <option value="sapatos">Sapatos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Avalie a Qualidade da Peça</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="qualidade" value="1"> 1 - Ruim</label>
+                    <label><input type="radio" name="qualidade" value="2"> 2 - Mediano</label>
+                    <label><input type="radio" name="qualidade" value="3"> 3 - Boa</label>
+                    <label><input type="radio" name="qualidade" value="4"> 4 - Seminova</label>
+                    <label><input type="radio" name="qualidade" value="5"> 5 - Nova</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="descricao">Descreva o Produto (Material, Cor, Tamanho)</label>
+                <textarea id="descricao" name="descricao" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
