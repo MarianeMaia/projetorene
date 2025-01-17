@@ -44,9 +44,35 @@ def cadastraruser():
     else:
         msg = 'Erro ao inserir usuário'
         return render_template('index.html', texto=msg)
+
+@app.route('/cadstrardoacao', methods=['POST'])
+def cadastrarroupa():
+        tipo = request.form.get('tipo')
+        qualidade = request.form.get('qualidade')
+        descricao = request.form.get('descricao')
+        endereco = request.form.get('endereco')
+
+        if dao.inserir_roupas(tipo, qualidade, descricao, endereco):
+            msg = 'roupa cadastrada com sucesso'
+            return render_template('home.html', texto=msg)
+        else:
+            msg = 'Erro ao cadastrar roupa'
+            return render_template('home.html', texto=msg)
+
+
+
 @app.route('/doar')
 def doarroupa():
     return render_template('pagdoacao.html')
+
+@app.route('/listar')
+def listarroupa():
+
+    roupas = dao.listarroupa()
+    print(roupas)
+    return render_template('paglistarroupa.html', lista=roupas)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -42,5 +42,38 @@ def inserir_user(nome, login, senha):
 
     cur.close()
     conn.close()
+
+def inserir_roupas(tipo, qualidade, descricao, endereco):
+
+    conn = conectardb()
+    cur = conn.cursor()
+    try:
+        sql = f"INSERT INTO roupas (tipo, qualidade, descricao, endereco) VALUES ('{tipo}','{qualidade}','{descricao}','{endereco}')"
+        cur.execute(sql)
+
+    except psycopg2.IntegrityError:
+        conn.rollback()
+        exito = False
+    else:
+        conn.commit()
+        exito = True
+
+    cur.close()
+    conn.close()
+
     return exito
+
+
+def listarroupa():
+    con = conectardb()
+    cur = con.cursor()
+    sq = f"SELECT  * from roupas"
+    cur.execute(sq)
+    saida = cur.fetchall()
+
+    cur.close()
+    con.close()
+
+    return saida
+
 
