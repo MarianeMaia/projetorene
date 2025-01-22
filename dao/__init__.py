@@ -76,4 +76,6 @@ def listarroupa():
 
     return saida
 
+print(listarroupa())
+
 

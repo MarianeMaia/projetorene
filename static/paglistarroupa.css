@@ -1,57 +1,94 @@
-Não consigo acessar diretamente a imagem para extrair o código HTML, mas posso ajudar a criar um arquivo CSS genérico para estilizar a página. Caso tenha o HTML dessa página, você pode colar aqui para que eu desenvolva um CSS mais específico.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-Segue um exemplo de arquivo CSS básico para elementos comuns:
-
-```css
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f4f4f9;
     color: #333;
-    margin: 20px;
-    padding: 0;
+    line-height: 1.6;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-h1, h2, h3 {
-    color: #222;
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-p {
-    margin-bottom: 10px;
+header h1 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-a {
+.page-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
     color: #007BFF;
-    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
+main {
+    padding: 20px;
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
+.user-list {
+    list-style: none;
 }
 
-.table th, .table td {
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 10px 0;
     border: 1px solid #ddd;
-    padding: 8px;
+    border-radius: 6px;
+    background: #f9f9f9;
+    transition: transform 0.2s, background 0.2s;
 }
 
-.table th {
-    background-color: #f4f4f4;
-    text-align: left;
+.user-item:hover {
+    background: #eef6ff;
+    transform: scale(1.02);
 }
-```
 
-Se você puder descrever o que precisa, ou compartilhar o HTML da página, posso criar algo mais ajustado!
+.user-tipo {
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+
+.user-qualidade {
+    margin-left: 30px;
+    color: #555;
+    font-style: italic;
+}
+.user-descricao {
+    margin-left: 30px;
+    color: #555;
+    font-style: italic;
+}
+.user-endereco {
+    margin-left: 30px;
+    color: #555;
+    font-style: italic;
+}

@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="..//static//paglistarroupa.css">
+      <link rel="stylesheet" href="..//static/paglistarroupa.css">
 </head>
 <body>
-    {% for roupas in lista %}
-        <p> {{roupas[0]}} - {{roupas[1]}} - {{roupas[2]}} - {{roupas[3]}}</p>
-    {% endfor %}
+     <h2 class="page-title">Lista de roupas cadastradas</h2>
+            <ul class="user-list">
+                {% for roupa in lista %}
+                <li class="user-item">
+                    <span class="user-tipo">{{roupa[0]}}</span>
+                    <span class="user-qualidade">{{roupa[1]}}</span>
+                    <span class="user-descricao">{{roupa[2]}}</span>
+                    <span class="user-endereco">{{roupa[3]}}</span>
 
+                </li>
+                {% endfor %}
+            </ul>
 </body>
 </html>
