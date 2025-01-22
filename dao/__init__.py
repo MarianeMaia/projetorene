@@ -10,7 +10,7 @@ def conectardb():
         password = '12345'
     )
     return con
-conectardb()
+
 
 
 def login(user,senha):
@@ -76,6 +76,6 @@ def listarroupa():
 
     return saida
 
-print(listarroupa())
+
 
 
