@@ -4,10 +4,10 @@ def conectardb():
 
     con = psycopg2.connect(
 
-        host='localhost',
-        database = '3anoifpb',
-        user = 'postgres',
-        password = '12345'
+        host='dpg-cu8funbv2p9s73cbm460-a.oregon-postgres.render.com',
+        database = 'roupasolidaria',
+        user = 'roupasolidaria_user',
+        password = 'iDmGzGSsZ7srVQhyUoGUmgLQC8PSbJXa'
     )
     return con
 
