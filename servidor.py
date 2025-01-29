@@ -40,6 +40,14 @@ def cadastraruser():
     login = request.form.get('login')
     senha = request.form.get('senha')
 
+    if dao.inserir_user(nome,login,senha):
+        msg = 'Erro ao cadastrar usuario'
+        return render_template('index.html', texto=msg)
+    else:
+        msg = 'usuario inserido com sucesso'
+        return render_template('index.html', texto=msg)
+
+
 @app.route('/cadastrardoacao', methods=['POST'])
 def cadastrarroupa():
     if 'login' in session:
