@@ -43,12 +43,12 @@ def inserir_user(nome, login, senha):
     cur.close()
     conn.close()
 
-def inserir_roupas(tipo, qualidade, descricao, endereco):
+def inserir_roupas(tipo, qualidade, descricao, endereco, login):
 
     conn = conectardb()
     cur = conn.cursor()
     try:
-        sql = f"INSERT INTO roupas (tipo, qualidade, descricao, endereco) VALUES ('{tipo}','{qualidade}','{descricao}','{endereco}')"
+        sql = f"INSERT INTO roupas (tipo, qualidade, descricao, endereco, login) VALUES ('{tipo}','{qualidade}','{descricao}','{endereco}','{login}')"
         cur.execute(sql)
 
     except psycopg2.IntegrityError:

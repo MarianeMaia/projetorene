@@ -55,8 +55,9 @@ def cadastrarroupa():
         qualidade = request.form.get('qualidade')
         descricao = request.form.get('descricao')
         endereco = request.form.get('endereco')
+        login = session['login']
 
-        if dao.inserir_roupas(tipo, qualidade, descricao, endereco):
+        if dao.inserir_roupas(tipo, qualidade, descricao, endereco, login):
             msg = 'roupa cadastrada com sucesso'
             return render_template('home.html', texto=msg)
         else:

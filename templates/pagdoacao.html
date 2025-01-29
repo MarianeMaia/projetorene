@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>CADASTRO DE ROUPAS PARA DOAÇÃO</h1>
-        <form action="/cadstrardoacao" method="post">
+        <form action="/cadastrardoacao" method="post">
             <div class="form-group">
                 <label for="tipo">Selecione o Tipo de Roupa</label>
                 <select id="tipo" name="tipo">
@@ -22,14 +22,14 @@
             </div>
 
             <div class="form-group">
-                <label>Avalie a Qualidade da Peça</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="qualidade" value="1"> 1 - Ruim</label>
-                    <label><input type="radio" name="qualidade" value="2"> 2 - Mediano</label>
-                    <label><input type="radio" name="qualidade" value="3"> 3 - Boa</label>
-                    <label><input type="radio" name="qualidade" value="4"> 4 - Seminova</label>
-                    <label><input type="radio" name="qualidade" value="5"> 5 - Nova</label>
-                </div>
+                <label for="qualidade">Avalie a Qualidade da Peça</label>
+                 <select id="qualidade" name="qualidade">
+                    <option value="ruim">ruim</option>
+                    <option value="mediano">mediano</option>
+                    <option value="bom">bom</option>
+                    <option value="seminovo">seminovo</option>
+                    <option value="novo">novo</option>
+                </select>
             </div>
 
             <div class="form-group">
