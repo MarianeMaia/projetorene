@@ -42,6 +42,7 @@ def cadastraruser():
 
 @app.route('/cadastrardoacao', methods=['POST'])
 def cadastrarroupa():
+    if 'login' in session:
         tipo = request.form.get('tipo')
         qualidade = request.form.get('qualidade')
         descricao = request.form.get('descricao')
@@ -53,6 +54,8 @@ def cadastrarroupa():
         else:
             msg = 'Erro ao cadastrar roupa'
             return render_template('home.html', texto=msg)
+    else:
+        return render_template('index.html')
 @app.route('/doar')
 def doarroupa():
     if 'login' in session:
